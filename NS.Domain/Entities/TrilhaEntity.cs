@@ -37,4 +37,6 @@ public class TrilhaEntity
 
     [Column("DATA_CRIACAO", TypeName = "TIMESTAMP(6)")]
     public DateTime DataCriacao { get; set; }
+
+    public ICollection<NotaTrilhaEntity> Notas { get; set; } = new List<NotaTrilhaEntity>();
 }
