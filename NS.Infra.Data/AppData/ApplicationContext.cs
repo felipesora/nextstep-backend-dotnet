@@ -18,4 +18,5 @@ public class ApplicationContext : DbContext
     }
 
     public DbSet<TrilhaEntity> Trilha { get; set; }
+    public DbSet<NotaTrilhaEntity> Nota { get; set; }
 }

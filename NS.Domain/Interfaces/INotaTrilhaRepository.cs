@@ -4,9 +4,9 @@ namespace NS.Domain.Interfaces;
 
 public interface INotaTrilhaRepository
 {
-    Task<PageResultModel<IEnumerable<TrilhaEntity>>> ObterTodasNotasAsync(int deslocamento = 0, int registrosRetornados = 10);
-    Task<PageResultModel<IEnumerable<TrilhaEntity>>> ObterNotasPorIdTrilhaAsync(int deslocamento = 0, int registrosRetornados = 10);
-    Task<TrilhaEntity?> ObterTrilhaPorIdAsync(long id);
-    Task<TrilhaEntity?> AdicionarNotaAsync(TrilhaEntity nota);
-    Task<TrilhaEntity?> EditarNotaAsync(long id, TrilhaEntity novaNota);
+    Task<PageResultModel<IEnumerable<NotaTrilhaEntity>>> ObterTodasNotasAsync(int deslocamento = 0, int registrosRetornados = 10);
+    Task<PageResultModel<IEnumerable<NotaTrilhaEntity>>> ObterNotasPorIdTrilhaAsync(long idTrilha, int deslocamento = 0, int registrosRetornados = 10);
+    Task<NotaTrilhaEntity?> ObterTrilhaPorIdAsync(long id);
+    Task<NotaTrilhaEntity?> AdicionarNotaAsync(NotaTrilhaEntity nota);
+    Task<NotaTrilhaEntity?> EditarNotaAsync(long id, NotaTrilhaEntity novaNota);
 }
