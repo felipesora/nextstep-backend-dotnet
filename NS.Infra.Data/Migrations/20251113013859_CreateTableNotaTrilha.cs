@@ -18,7 +18,7 @@ namespace NS.Infra.Data.Migrations
                     ID_NOTA = table.Column<long>(type: "NUMBER(19)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
                     VALOR_NOTA = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    OBSERVACAO = table.Column<string>(type: "varchar2(400)", nullable: false),
+                    OBSERVACAO = table.Column<string>(type: "varchar2(400)", nullable: true),
                     ID_TRILHA = table.Column<long>(type: "NUMBER(19)", nullable: false)
                 },
                 constraints: table =>
