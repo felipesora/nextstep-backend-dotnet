@@ -12,7 +12,7 @@ public class NotaTrilhaRepository : INotaTrilhaRepository
 
     private readonly ApplicationContext _context;
 
-    public INotaTrilhaRepository(ApplicationContext context)
+    public NotaTrilhaRepository(ApplicationContext context)
     {
         _context = context;
     }

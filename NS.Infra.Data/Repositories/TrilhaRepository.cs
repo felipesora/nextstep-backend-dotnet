@@ -62,7 +62,7 @@ public class TrilhaRepository : ITrilhaRepository
         };
     }
 
-    public async Task<TrilhaEntity?> ObterNotaPorIdAsync(long id)
+    public async Task<TrilhaEntity?> ObterTrilhaPorIdAsync(long id)
     {
         var result = await _context
             .Trilha

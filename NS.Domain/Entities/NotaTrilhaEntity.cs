@@ -12,7 +12,7 @@ public class NotaTrilhaEntity
 
     [Required]
     [Range(0, 5, ErrorMessage = "A nota deve estar entre 0 e 5.")]
-    [Column("VALOR_NOTA", TypeName = "NUMBER(1)")]
+    [Column("VALOR_NOTA")]
     public int ValorNota { get; set; }
 
     [Column("OBSERVACAO", TypeName = "varchar2(400)")]

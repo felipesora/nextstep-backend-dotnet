@@ -15,6 +15,15 @@ public class ApplicationContext : DbContext
             entity.Property(e => e.Nivel).HasConversion<string>();
             entity.Property(e => e.Status).HasConversion<string>();
         });
+
+        modelBuilder.Entity<NotaTrilhaEntity>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.Id)
+                .HasColumnName("ID_NOTA")
+                .ValueGeneratedOnAdd(); // 👈 ESSA LINHA É O PULO DO GATO
+        });
     }
 
     public DbSet<TrilhaEntity> Trilha { get; set; }
