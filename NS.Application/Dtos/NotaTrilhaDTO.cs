@@ -11,4 +11,7 @@ public class NotaTrilhaDTO
 
     [Required]
     public long IdTrilha { get; set; }
+
+    [Required]
+    public long IdUsuario { get; set; }
 }

@@ -26,4 +26,6 @@ public class UsuarioEntity
 
     [Column("DATA_CADASTRO", TypeName = "TIMESTAMP(6)")]
     public DateTime DataCadastro { get; set; }
+
+    public ICollection<NotaTrilhaEntity> Notas { get; set; } = new List<NotaTrilhaEntity>();
 }

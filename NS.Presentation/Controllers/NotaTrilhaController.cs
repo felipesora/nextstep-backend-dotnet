@@ -48,6 +48,7 @@ public class NotaTrilhaController : ControllerBase
                 t.ValorNota,
                 t.Observacao,
                 t.IdTrilha,
+                t.IdUsuario,
                 links = new
                 {
                     self = Url.Action(nameof(GetId), "NotaTrilha", new { id = t.Id }, Request.Scheme),
@@ -90,6 +91,7 @@ public class NotaTrilhaController : ControllerBase
                 t.ValorNota,
                 t.Observacao,
                 t.IdTrilha,
+                t.IdUsuario,
                 links = new
                 {
                     self = Url.Action(nameof(GetId), "NotaTrilha", new { id = t.Id }, Request.Scheme),
@@ -129,7 +131,8 @@ public class NotaTrilhaController : ControllerBase
             trilha.Value.Id,
             trilha.Value.ValorNota,
             trilha.Value.Observacao,
-            trilha.Value.IdTrilha
+            trilha.Value.IdTrilha,
+            trilha.Value.IdUsuario
         };
 
         return Ok(response);

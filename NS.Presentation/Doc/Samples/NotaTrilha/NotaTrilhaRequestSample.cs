@@ -12,6 +12,7 @@ public class NotaTrilhaRequestSample : IExamplesProvider<NotaTrilhaDTO>
             ValorNota = 5,
             Observacao = "Trilha excelente! Explicações claras e exemplos práticos. Recomendo muito!",
             IdTrilha = 1,
+            IdUsuario = 1
         };
     }
 }

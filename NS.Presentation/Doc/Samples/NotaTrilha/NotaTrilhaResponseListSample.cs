@@ -16,6 +16,7 @@ public class NotaTrilhaResponseListSample : IExamplesProvider<IEnumerable<NotaTr
                 ValorNota = 5,
                 Observacao = "Trilha excelente! Explicações claras e exemplos práticos. Recomendo muito!",
                 IdTrilha = 1,
+                IdUsuario = 1
             },
             new NotaTrilhaEntity()
             {
@@ -23,6 +24,7 @@ public class NotaTrilhaResponseListSample : IExamplesProvider<IEnumerable<NotaTr
                 ValorNota = 3,
                 Observacao = "Conteúdo bom, mas poderia ter mais exercícios práticos e desafios no final.",
                 IdTrilha = 2,
+                IdUsuario = 1
             },
         };
     }

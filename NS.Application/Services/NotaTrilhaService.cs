@@ -12,10 +12,14 @@ public class NotaTrilhaService : INotaTrilhaService
     #region :: INJEÇÃO DE DEPENDÊNCIA
 
     private readonly INotaTrilhaRepository _notaTrilhaRepository;
+    private readonly IUsuarioRepository _usuarioRepository;
+    private readonly ITrilhaRepository _trilhaRepository;
 
-    public NotaTrilhaService(INotaTrilhaRepository notaTrilhaRepository)
+    public NotaTrilhaService(INotaTrilhaRepository notaTrilhaRepository, IUsuarioRepository usuarioRepository, ITrilhaRepository trilhaRepository)
     {
         _notaTrilhaRepository = notaTrilhaRepository;
+        _usuarioRepository = usuarioRepository;
+        _trilhaRepository = trilhaRepository;
     }
 
     #endregion
@@ -81,6 +85,16 @@ public class NotaTrilhaService : INotaTrilhaService
     {
         try
         {
+            var trilha = await _trilhaRepository.ObterTrilhaPorIdAsync(notaDTO.IdTrilha);
+
+            if (trilha is null)
+                return OperationResult<NotaTrilhaEntity?>.Failure("Trilha não encontrada", (int)HttpStatusCode.NotFound);
+
+            var usuario = await _usuarioRepository.ObterUsuarioPorIdAsync(notaDTO.IdUsuario);
+
+            if (usuario is null)
+                return OperationResult<NotaTrilhaEntity?>.Failure("Usuário não encontrado", (int)HttpStatusCode.NotFound);
+
             var result = await _notaTrilhaRepository.AdicionarNotaAsync(notaDTO.ToNotaEntity());
 
             return OperationResult<NotaTrilhaEntity?>.Success(result);
