@@ -11,7 +11,8 @@ public static class NotaTrilhaMapper
         {
             ValorNota = dto.ValorNota,
             Observacao = dto.Observacao,
-            IdTrilha = dto.IdTrilha
+            IdTrilha = dto.IdTrilha,
+            IdUsuario = dto.IdUsuario
         };
 
         entity.Id = default; // força o EF a tratar como novo registro

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace NS.Domain.Entities;
 
@@ -23,5 +24,14 @@ public class NotaTrilhaEntity
     [Column("ID_TRILHA")]
     public long IdTrilha { get; set; }
 
+    [Required]
+    [ForeignKey("Usuario")]
+    [Column("ID_USUARIO_FINAL")]
+    public long IdUsuario { get; set; }
+
+    [JsonIgnore]
     public TrilhaEntity Trilha { get; set; }
+
+    [JsonIgnore]
+    public UsuarioEntity Usuario { get; set; }
 }

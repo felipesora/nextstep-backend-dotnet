@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NS.Infra.Data.AppData;
 using Oracle.EntityFrameworkCore.Metadata;
@@ -11,9 +12,11 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace NS.Infra.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20251113184854_CreateTableUsuarioFinal")]
+    partial class CreateTableUsuarioFinal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,10 +38,6 @@ namespace NS.Infra.Data.Migrations
                         .HasColumnType("NUMBER(19)")
                         .HasColumnName("ID_TRILHA");
 
-                    b.Property<long>("IdUsuario")
-                        .HasColumnType("NUMBER(19)")
-                        .HasColumnName("ID_USUARIO_FINAL");
-
                     b.Property<string>("Observacao")
                         .IsRequired()
                         .HasColumnType("varchar2(400)")
@@ -51,8 +50,6 @@ namespace NS.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdTrilha");
-
-                    b.HasIndex("IdUsuario");
 
                     b.ToTable("NS_NOTA_TRILHA");
                 });
@@ -144,23 +141,10 @@ namespace NS.Infra.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NS.Domain.Entities.UsuarioEntity", "Usuario")
-                        .WithMany("Notas")
-                        .HasForeignKey("IdUsuario")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Trilha");
-
-                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("NS.Domain.Entities.TrilhaEntity", b =>
-                {
-                    b.Navigation("Notas");
-                });
-
-            modelBuilder.Entity("NS.Domain.Entities.UsuarioEntity", b =>
                 {
                     b.Navigation("Notas");
                 });

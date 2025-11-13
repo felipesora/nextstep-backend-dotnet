@@ -22,10 +22,11 @@ public class ApplicationContext : DbContext
 
             entity.Property(e => e.Id)
                 .HasColumnName("ID_NOTA")
-                .ValueGeneratedOnAdd(); // 👈 ESSA LINHA É O PULO DO GATO
+                .ValueGeneratedOnAdd();
         });
     }
 
     public DbSet<TrilhaEntity> Trilha { get; set; }
     public DbSet<NotaTrilhaEntity> Nota { get; set; }
+    public DbSet<UsuarioEntity> Usuario { get; set; }
 }
