@@ -25,6 +25,9 @@ public class Bootstrap
         //    //Readiness: verifica se o mongo "esta online"
         //    .AddCheck<OracleHealthCheck>("oracle_ef_query", tags: new[] { "ready" });
 
+        services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+        services.AddTransient<IUsuarioService, UsuarioService>();
+
         services.AddTransient<ITrilhaRepository, TrilhaRepository>();
         services.AddTransient<ITrilhaService, TrilhaService>();
 
