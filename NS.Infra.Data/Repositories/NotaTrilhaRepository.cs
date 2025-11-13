@@ -62,7 +62,7 @@ public class NotaTrilhaRepository : INotaTrilhaRepository
         };
     }
 
-    public async Task<NotaTrilhaEntity?> ObterTrilhaPorIdAsync(long id)
+    public async Task<NotaTrilhaEntity?> ObterNotaPorIdAsync(long id)
     {
         var result = await _context
             .Nota

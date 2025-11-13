@@ -27,5 +27,8 @@ public class Bootstrap
 
         services.AddTransient<ITrilhaRepository, TrilhaRepository>();
         services.AddTransient<ITrilhaService, TrilhaService>();
+
+        services.AddTransient<INotaTrilhaRepository, NotaTrilhaRepository>();
+        services.AddTransient<INotaTrilhaService, NotaTrilhaService>();
     }
 }
