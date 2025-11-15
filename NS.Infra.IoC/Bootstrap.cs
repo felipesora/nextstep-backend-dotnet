@@ -33,5 +33,8 @@ public class Bootstrap
 
         services.AddTransient<INotaTrilhaRepository, NotaTrilhaRepository>();
         services.AddTransient<INotaTrilhaService, NotaTrilhaService>();
+
+        services.AddTransient<IConteudoRepository, ConteudoRepository>();
+        services.AddTransient<IConteudoService, ConteudoService>();
     }
 }
