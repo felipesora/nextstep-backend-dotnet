@@ -29,7 +29,7 @@ public class ConteudoEntity
     public TipoConteudo Tipo { get; set; }
 
     [Column("LINK", TypeName = "varchar2(150)")]
-    public string Link { get; set; }
+    public string? Link { get; set; }
 
     [Column("DATA_CRIACAO", TypeName = "TIMESTAMP(6)")]
     public DateTime DataCriacao { get; set; }

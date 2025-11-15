@@ -1,5 +1,8 @@
-﻿namespace NS.Domain.Enums;
+﻿using System.Text.Json.Serialization;
 
+namespace NS.Domain.Enums;
+
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum TipoConteudo
 {
     CURSO,
