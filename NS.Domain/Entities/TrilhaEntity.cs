@@ -39,4 +39,6 @@ public class TrilhaEntity
     public DateTime DataCriacao { get; set; }
 
     public ICollection<NotaTrilhaEntity> Notas { get; set; } = new List<NotaTrilhaEntity>();
+
+    public ICollection<ConteudoEntity> Conteudos { get; set; } = new List<ConteudoEntity>();
 }
