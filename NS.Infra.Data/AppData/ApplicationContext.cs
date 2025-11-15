@@ -16,6 +16,11 @@ public class ApplicationContext : DbContext
             entity.Property(e => e.Status).HasConversion<string>();
         });
 
+        modelBuilder.Entity<ConteudoEntity>(entity =>
+        {
+            entity.Property(e => e.Tipo).HasConversion<string>();
+        });
+
         modelBuilder.Entity<NotaTrilhaEntity>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -29,4 +34,5 @@ public class ApplicationContext : DbContext
     public DbSet<TrilhaEntity> Trilha { get; set; }
     public DbSet<NotaTrilhaEntity> Nota { get; set; }
     public DbSet<UsuarioEntity> Usuario { get; set; }
+    public DbSet<ConteudoEntity> Conteudo { get; set; }
 }
