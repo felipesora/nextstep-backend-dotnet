@@ -29,10 +29,21 @@ public class ApplicationContext : DbContext
                 .HasColumnName("ID_NOTA")
                 .ValueGeneratedOnAdd();
         });
+
+        modelBuilder.Entity<FormularioEntity>(entity =>
+        {
+            entity.Property(e => e.NivelExperiencia).HasConversion<string>();
+            entity.Property(e => e.ObjetivoCarreira).HasConversion<string>();
+            entity.Property(e => e.AreaTecnologia1).HasConversion<string>();
+            entity.Property(e => e.AreaTecnologia2).HasConversion<string>();
+            entity.Property(e => e.AreaTecnologia3).HasConversion<string>();
+            entity.Property(e => e.HorasEstudo).HasConversion<string>();
+        });
     }
 
     public DbSet<TrilhaEntity> Trilha { get; set; }
     public DbSet<NotaTrilhaEntity> Nota { get; set; }
     public DbSet<UsuarioEntity> Usuario { get; set; }
     public DbSet<ConteudoEntity> Conteudo { get; set; }
+    public DbSet<FormularioEntity> Formulario { get; set; }
 }
