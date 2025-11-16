@@ -16,7 +16,7 @@ public class ConteudoDTO
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public TipoConteudo Tipo { get; set; }
 
-    public string Link { get; set; }
+    public string? Link { get; set; }
 
     [Required]
     public long IdTrilha { get; set; }
