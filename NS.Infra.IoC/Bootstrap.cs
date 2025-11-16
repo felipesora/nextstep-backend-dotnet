@@ -36,5 +36,8 @@ public class Bootstrap
 
         services.AddTransient<IConteudoRepository, ConteudoRepository>();
         services.AddTransient<IConteudoService, ConteudoService>();
+
+        services.AddTransient<IFormularioRepository, FormularioRepository>();
+        services.AddTransient<IFormularioService, FormularioService>();
     }
 }
