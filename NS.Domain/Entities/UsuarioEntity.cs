@@ -28,4 +28,5 @@ public class UsuarioEntity
     public DateTime DataCadastro { get; set; }
 
     public ICollection<NotaTrilhaEntity> Notas { get; set; } = new List<NotaTrilhaEntity>();
+    public ICollection<FormularioEntity> Formularios { get; set; } = new List<FormularioEntity>();
 }
