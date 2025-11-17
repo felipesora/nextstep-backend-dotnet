@@ -70,6 +70,8 @@ public class TrilhaRepository : ITrilhaRepository
     {
         var result = await _context
             .Trilha
+            .Include(t => t.Conteudos)
+            .Include(t => t.Notas)
             .FirstOrDefaultAsync(m => m.Id == id);
 
         return result;
