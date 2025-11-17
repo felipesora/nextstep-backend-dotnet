@@ -27,6 +27,8 @@ public class TrilhaRepository : ITrilhaRepository
 
         var result = await _context
             .Trilha
+            .Include(t => t.Conteudos)
+            .Include(t => t.Notas)
             .OrderBy(m => m.Id)
             .Skip(deslocamento)
             .Take(registrosRetornados)
@@ -47,6 +49,8 @@ public class TrilhaRepository : ITrilhaRepository
 
         var result = await _context
             .Trilha
+            .Include(t => t.Conteudos)
+            .Include(t => t.Notas)
             .Where(t => t.Status == StatusTrilha.ATIVA)
             .OrderBy(m => m.Id)
             .Skip(deslocamento)

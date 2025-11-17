@@ -49,6 +49,8 @@ public class TrilhaController : ControllerBase
                 t.Nivel,
                 t.Status,
                 t.DataCriacao,
+                t.Conteudos,
+                t.Notas,
                 links = new
                 {
                     self = Url.Action(nameof(GetId), "Trilha", new { id = t.Id }, Request.Scheme),
@@ -94,6 +96,8 @@ public class TrilhaController : ControllerBase
                 t.Nivel,
                 t.Status,
                 t.DataCriacao,
+                t.Conteudos,
+                t.Notas,
                 links = new
                 {
                     self = Url.Action(nameof(GetId), "Trilha", new { id = t.Id }, Request.Scheme),
@@ -136,6 +140,9 @@ public class TrilhaController : ControllerBase
             trilha.Value.Area,
             trilha.Value.Nivel,
             trilha.Value.Status,
+            trilha.Value.DataCriacao,
+            trilha.Value.Conteudos,
+            trilha.Value.Notas
         };
 
         return Ok(response);
