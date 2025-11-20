@@ -17,7 +17,7 @@ public class NotaTrilhaEntity
     public int ValorNota { get; set; }
 
     [Column("OBSERVACAO", TypeName = "varchar2(400)")]
-    public string Observacao { get; set; }
+    public string? Observacao { get; set; }
 
     [Required]
     [ForeignKey("Trilha")]
