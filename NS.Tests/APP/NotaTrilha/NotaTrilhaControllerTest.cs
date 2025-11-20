@@ -101,7 +101,7 @@ public class NotaTrilhaControllerTest : IClassFixture<CustomWebApplicationFactor
     // ========================================
     // GET /api/NotaTrilha/ativas?idTrilha={id}
     // ========================================
-    [Fact(DisplayName = "GET /api/NotaTrilha/ativas?idTrilha=10 - Deve retornar notas da trilha")]
+    [Fact(DisplayName = "GET /api/NotaTrilha/trilha?idTrilha=10 - Deve retornar notas da trilha")]
     public async Task GetByTrilha_DeveRetornarNotasDaTrilha()
     {
         var notas = new List<NotaTrilhaEntity> { BuildNota() };
@@ -119,7 +119,7 @@ public class NotaTrilhaControllerTest : IClassFixture<CustomWebApplicationFactor
             .ReturnsAsync(retorno);
 
         using var client = _factory.CreateClient();
-        var response = await client.GetAsync("/api/NotaTrilha/ativas?idTrilha=10");
+        var response = await client.GetAsync("/api/NotaTrilha/trilha?idTrilha=10");
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
