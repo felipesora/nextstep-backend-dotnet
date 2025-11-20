@@ -26,6 +26,8 @@ public class UsuarioRepository : IUsuarioRepository
 
         var result = await _context
             .Usuario
+            .Include(u => u.Formularios)
+            .Include(u => u.Notas)
             .OrderBy(c => c.Id)
             .Skip(deslocamento)
             .Take(registrosRetornados)
@@ -44,6 +46,8 @@ public class UsuarioRepository : IUsuarioRepository
     {
         var result = await _context
             .Usuario
+            .Include(u => u.Formularios)
+            .Include(u => u.Notas)
             .FirstOrDefaultAsync(c => c.Id == id);
 
         return result;

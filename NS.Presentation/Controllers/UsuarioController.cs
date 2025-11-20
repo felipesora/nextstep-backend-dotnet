@@ -51,6 +51,8 @@ public class UsuarioController : ControllerBase
                 u.Email,
                 u.Senha,
                 u.DataCadastro,
+                u.Formularios,
+                u.Notas,
                 links = new
                 {
                     self = Url.Action(nameof(GetId), "Usuario", new { id = u.Id }, Request.Scheme),
