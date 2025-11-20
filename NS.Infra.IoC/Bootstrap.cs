@@ -16,7 +16,6 @@ public class Bootstrap
     public static void AddIoC(IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<ApplicationContext>(options => {
-            //options.UseOracle(configuration.GetConnectionString("Oracle"));
             options.UseOracle(configuration.GetConnectionString("Oracle"));
         });
 

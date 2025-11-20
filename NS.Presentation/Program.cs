@@ -7,6 +7,12 @@ using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var orclConn = Environment.GetEnvironmentVariable("ORCL_CONNECTION_STRING");
+if (!string.IsNullOrEmpty(orclConn))
+{
+    builder.Configuration["ConnectionStrings:Oracle"] = orclConn;
+}
+
 Bootstrap.AddIoC(builder.Services, builder.Configuration);
 
 builder.Services.AddControllers();
