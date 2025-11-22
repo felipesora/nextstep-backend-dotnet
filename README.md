@@ -3,6 +3,7 @@
 ## 📌 Sumário
 
 - [📝 Descrição da Solução](#-descrição-da-solução)
+- [🎥 Vídeo Pitch da Solução](#-vídeo-pitch-da-solução)
 - [🧩 Estrutura da Solução](#-estrutura-da-solução)
 - [▶️ Como Rodar o Projeto](#️-como-rodar-o-projeto)
 - [🧩 Detalhes da API REST .NET — ASP.NET Core](#-detalhes-da-api-rest-net--aspnet-core)
@@ -26,6 +27,26 @@ As trilhas são criadas em áreas essenciais como **Backend, Frontend, Cloud, Da
 Para agilizar o processo, o admin conta com uma **IA integrada**, capaz de gerar automaticamente descrições completas de trilhas a partir apenas do título informado.
 
 No app, o usuário tem uma jornada clara, simples e guiada. Com ajuda da **IA recomendadora**, o NextStep analisa o perfil, interesses e objetivos do usuário por meio de um pequeno questionário e indica automaticamente a trilha mais adequada, tornando o processo de aprendizado muito mais assertivo.
+
+---
+
+## 🎥 Vídeo Pitch da Solução
+
+Para entender a visão geral do **NextStep**, sua proposta, funcionalidades principais e o problema que a solução resolve, assista ao vídeo pitch preparado especialmente para apresentar o projeto de forma clara e objetiva.
+
+**👉 Assista ao Vídeo Pitch aqui:**
+
+[Clique para ver o vídeo pitch do NextStep](https://www.youtube.com/watch?v=hw-RtEkYCA4)
+
+Este vídeo resume:
+
+- O propósito da plataforma
+- Como o NextStep ajuda na preparação para profissões do futuro
+- Os diferenciais da solução
+- Demonstrações visuais das principais telas
+- A importância de cada módulo desenvolvido
+
+> É a melhor forma de ter uma visão rápida, completa e direta sobre todo o ecossistema NextStep.
 
 ---
 
