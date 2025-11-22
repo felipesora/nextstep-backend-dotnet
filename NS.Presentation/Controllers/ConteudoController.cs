@@ -70,7 +70,7 @@ public class ConteudoController : ControllerBase
         return Ok(hateaos);
     }
 
-    [HttpGet("trilha")]
+    [HttpGet("trilha/{idTrilha}")]
     [SwaggerOperation(
             Summary = "Lista de Conteúdos de uma Trilha",
             Description = "Retorna a lista de conteúdos cadastrados de uma trilha."
