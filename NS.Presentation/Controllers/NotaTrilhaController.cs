@@ -69,7 +69,7 @@ public class NotaTrilhaController : ControllerBase
         return Ok(hateaos);
     }
 
-    [HttpGet("trilha")]
+    [HttpGet("trilha/{idTrilha}")]
     [SwaggerOperation(
             Summary = "Lista de Notas de uma Trilha",
             Description = "Retorna a lista de notas de uma trilha cadastradas."

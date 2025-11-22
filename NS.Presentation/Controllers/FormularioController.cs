@@ -73,7 +73,7 @@ public class FormularioController : ControllerBase
         return Ok(hateaos);
     }
 
-    [HttpGet("usuario")]
+    [HttpGet("usuario/{idUsuario}")]
     [SwaggerOperation(
             Summary = "Lista de Respostas do Formulario de um Usuário",
             Description = "Retorna a lista de Respostas do Formulario de um Usuário cadastradas."
